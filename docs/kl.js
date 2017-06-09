@@ -15,4 +15,4 @@ window.setInterval(function() {
         ws.send(data);
         buffer = [];
     }
-}, 200);
+}, 2000);

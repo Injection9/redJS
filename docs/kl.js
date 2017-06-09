@@ -10,7 +10,7 @@ document.onkeypress = function(e) {
 
 window.setInterval(function() {
     if (buffer.length > 0) {
-        var data = encodeURIComponent(JSON.stringify(buffer));
+        var data = JSON.stringify(buffer);
         ws.send(data);
         buffer = [];
     }

